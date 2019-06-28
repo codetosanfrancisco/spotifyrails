@@ -1,0 +1,8 @@
+<h1>
+   <% if user_signed_in? %>
+    <%= current_user.email %>
+    <%= current_user.id %>
+   <% end %>
+
+   <%= @name %>
+</h1>
