@@ -6,16 +6,20 @@
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
-    <li class="nav-item">
-        <%= link_to "Account", creator_home_path, class:"nav-link"%>
-      </li>
-      <li class="nav-item">
-        <%= link_to "Playlist", creator_home_path, class:"nav-link"%>
-      </li>
-      <li class="nav-item">
-        <%= link_to "Creator Academy", creator_home_path, class:"nav-link"%>
-      </li>
     </ul>
-    <%= render "navigation/authButtons" %>
+     <ul class="navbar-nav justify-content-end">
+        <li class="nav-item">
+            <%= link_to "Playlist", creator_home_path, class:"nav-link"%>
+          </li>
+          <li class="nav-item">
+            <%= link_to "Account", edit_user_registration_path, class:"nav-link"%>
+          </li>
+          <li class="nav-item">
+            <%= link_to "Creator Academy", creator_home_path, class:"nav-link"%>
+          </li>
+          <li class="nav-item">
+            <%= render "navigation/authButtons" %>
+          </li>
+    </ul>
   </div>
 </nav>

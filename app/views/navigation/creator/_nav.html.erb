@@ -1,0 +1,25 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <%= link_to "Spotify Creator Academy", creator_home_path,:class => "navbar-brand"%>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">   
+    </ul>
+    <ul class="navbar-nav justify-content-end">
+     <li class="nav-item">
+        <%= link_to "Albums", creator_home_path, class:"nav-link"%>
+      </li>
+    <li class="nav-item">
+        <%= link_to "Create an Album", root_path, class:"nav-link"%>
+      </li>
+  <li class="nav-item">
+        <%= link_to "Back To Spotify", root_path, class:"nav-link"%>
+      </li>
+       <li class="nav-item">
+        <%= render "navigation/authButtons" %>
+      </li>
+</ul>
+  </div>
+</nav>

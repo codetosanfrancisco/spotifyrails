@@ -8,4 +8,6 @@ class UsersController < Devise::RegistrationsController
     user = User.create(:email => params[:user][:email],:password => params[:user][:password],:role => 0)
     redirect_to new_user_session_path
   end
+
+
 end
