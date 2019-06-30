@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   resource :songs
   resource :company
   resource :albums 
+  resource :artists
   get "albums/:id/artists",to:"albums#artists",as: "albums_artists"
   devise_scope :user do
     get "/auth/google_oauth2/callback" => "sessions#create_from_omniauth"

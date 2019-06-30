@@ -1,0 +1,19 @@
+<h3>Register your artist</h3>
+
+<%= form_for @artist, url: {action: "create"} do |f| %>
+
+<div class="form-group">
+    <%= f.label :name %><br />
+    <%= f.text_field :name, autofocus: true,class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :year_of_debut%><br />
+    <%= f.number_field :year_of_debut,class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.submit "Create" %>
+  </div>
+  
+<% end %>

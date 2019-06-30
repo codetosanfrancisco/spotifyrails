@@ -1,10 +1,12 @@
 <h1>Artists of Album <%= @album.name%></h1>
-
+<div>
+    <%= link_to "Create new artist",new_artists_path%>
+</div>
 <h4>Artists in your company</h4>
 <div style="width:500px;height:500px;border:1px solid black">
 
 </div>
 
 <div>
-    <button>Add artists</button>
+    <button>Add artists to <%= @album.name%> Album</button>
 </div>
