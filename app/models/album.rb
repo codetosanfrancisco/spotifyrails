@@ -1,3 +1,4 @@
 class Album < ApplicationRecord
-  has_many :artists, :through => album_artist
+  belongs_to :company
+  has_many :artists, :through => :album_artist
 end
