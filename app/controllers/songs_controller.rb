@@ -1,13 +1,17 @@
 class SongsController < ApplicationController
     def new
-        byebug
         @song = Song.new
     end
 
     def create
-        byebug
         song = Song.new(name: params[:song][:name],description:params[:song][:description],file:params[:song][:file])
         song.album = Album.first
-        song.save
+        if song.save
+            flash[:success] = "Songs is successfully added."
+            redirect_to root_path
+        else
+            flash.now[:danger] = "Songs cannot be added."
+            render "new"
+        end
     end
 end

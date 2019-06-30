@@ -1,11 +1,12 @@
 Rails.application.routes.draw do
   root 'pages#index'
+  resource :songs
+  resource :company
+  resource :albums 
+  get "albums/:id/artists",to:"albums#artists",as: "albums_artists"
   devise_scope :user do
     get "/auth/google_oauth2/callback" => "sessions#create_from_omniauth"
-end
+  end
   devise_for :users, :controllers => {:registrations => "users",:sessions => "sessions"}
-  resource :songs
   get '/creator/home', to: 'creator#home', as: 'creator_home'
-  #devise_for :users
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
